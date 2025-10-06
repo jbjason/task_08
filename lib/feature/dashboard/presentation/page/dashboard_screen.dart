@@ -29,6 +29,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
         // popular courses
         MyDimens().getTitle("Popular Courses 🔥"), 
         DashboardCourseItemList(),
+        // extra parts
+        DashboardExploreTitle() ,
+        DashboardExploreList(),
       ],
     );
   }
