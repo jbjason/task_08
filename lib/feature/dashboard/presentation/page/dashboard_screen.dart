@@ -15,24 +15,26 @@ class DashboardScreen extends StatefulWidget {
 class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      spacing: 20,
-      children: [
-        // appbar
-        DashboardAppbar(),
-        // category
-        DashboardCategories(),
-        // explore files title
-        DashboardExploreTitle() ,
-        DashboardExploreList(),
-        // popular courses
-        MyDimens().getTitle("Popular Courses 🔥"), 
-        DashboardCourseItemList(),
-        // extra parts
-        DashboardExploreTitle() ,
-        DashboardExploreList(),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        spacing: 20,
+        children: [
+          // appbar
+          DashboardAppbar(),
+          // category
+          DashboardCategories(),
+          // explore files title
+          DashboardExploreTitle() ,
+          DashboardExploreList(),
+          // popular courses
+          MyDimens().getTitle("Popular Courses 🔥"), 
+          DashboardCourseItemList(),
+          // extra parts
+          DashboardExploreTitle() ,
+          DashboardExploreList(),
+        ],
+      ),
     );
   }
 }

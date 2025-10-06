@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:task_08/config/extenstion/media_query_extension.dart';
+import 'package:task_08/core/util/my_constant.dart';
 
 class HomeNavbar extends StatelessWidget {
   const HomeNavbar(
@@ -10,42 +10,44 @@ class HomeNavbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final navItemImages = [
-      Icons.home_outlined,
-      Icons.search_off,
-      Icons.punch_clock_outlined,
-      Icons.person_outline,
-    ];
-    final navItemSelectedImages = [
-      Icons.home,
-      CupertinoIcons.search_circle_fill,
-      Icons.punch_clock,
-      Icons.person,
-    ];
-    final itemWidth = context.screenWidth/navItemImages.length;
+    final items = MyConstant.navItemImages;
+    final itemWidth = context.screenWidth / items.length;
     return SizedBox(
       height: kBottomNavigationBarHeight * 1.5,
       child: Row(
-        children: List.generate(navItemSelectedImages.length,
-         (i)=>_getNavBarItem(index: i,
-          icon:currentPage==i ?navItemSelectedImages[i] : 
-           navItemImages[i],
-            color: currentPage==i ? Colors.green:Colors.grey,
-           width:itemWidth ),
-      ),),
+        children: List.generate(
+          items.length,
+          (i) => _getNavBarItem(
+            index: i,
+            image: currentPage == i
+                ? MyConstant.navItemSelectedImages[i]
+                : MyConstant.navItemImages[i],
+            color: currentPage == i ? Colors.green : Colors.grey,
+            title: MyConstant.navItems[i],
+            width: itemWidth,
+          ),
+        ),
+      ),
     );
   }
 
-  Widget _getNavBarItem({
-    required int index,
-     required IconData icon,
-    required Color color,
-    required double width
-  }) =>
+  Widget _getNavBarItem(
+          {required int index,
+          required String image,
+          required Color color,
+          required String title,
+          required double width}) =>
       GestureDetector(
         onTap: () => onPageChange(index),
         child: SizedBox(
           width: width,
-          child: Center(child: Icon(icon),),),
+          child: Column(
+            children: [
+              Image.asset(image),
+              const SizedBox(height: 5),
+              FittedBox(child: Text(title))
+            ],
+          ),
+        ),
       );
 }

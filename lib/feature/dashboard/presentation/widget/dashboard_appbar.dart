@@ -39,7 +39,7 @@ class DashboardAppbar extends StatelessWidget {
               contentPadding:
                   EdgeInsets.symmetric(horizontal: 20, vertical: 15),
               label: Text("Search..."),
-              prefixIcon: Image.asset(MyIcons.seaech1),
+              prefixIcon: Image.asset(MyIcons.search1),
               filled: true,
               fillColor: Colors.white,
               enabled: false,

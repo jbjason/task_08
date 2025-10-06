@@ -1,3 +1,4 @@
+import 'package:task_08/core/util/my_icons.dart';
 import 'package:task_08/core/util/my_image.dart';
 import 'package:task_08/feature/dashboard/data/model/course_item.dart';
 import 'package:task_08/feature/dashboard/data/model/explore_item.dart';
@@ -8,6 +9,22 @@ class MyConstant {
     "Hello000",
     "Exammm",
     "Graduate",
+  ];
+  static const navItems = ["Home", "Search", "Chat", "Application", "Profile"];
+
+  static const List<String> navItemImages = [
+    MyIcons.home1,
+    MyIcons.search1,
+    MyIcons.message1,
+    MyIcons.file1,
+    MyIcons.user1,
+  ];
+  static const navItemSelectedImages = [
+    MyIcons.home2,
+    MyIcons.search2,
+    MyIcons.message2,
+    MyIcons.file2,
+    MyIcons.user2,
   ];
 
   static List<ExploreItem> exploreItems = [
