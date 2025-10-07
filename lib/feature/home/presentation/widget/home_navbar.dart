@@ -42,6 +42,7 @@ class HomeNavbar extends StatelessWidget {
         child: SizedBox(
           width: width,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(image),
               const SizedBox(height: 5),

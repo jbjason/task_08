@@ -35,7 +35,6 @@ class SearchScreen extends StatelessWidget {
                       prefixIcon: Image.asset(MyIcons.search1),
                       suffixIcon: Image.asset(MyIcons.settings),
                       filled: true,
-                      fillColor: Colors.white,
                       enabled: false,
                       border: OutlineInputBorder(
                         borderSide: BorderSide.none,

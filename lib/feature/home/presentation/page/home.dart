@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:task_08/feature/application/presentation/page/application_screen.dart';
 import 'package:task_08/feature/dashboard/presentation/page/dashboard_screen.dart';
 import 'package:task_08/feature/home/presentation/widget/home_navbar.dart';
+import 'package:task_08/feature/search/presentation/page/filter_screen.dart';
+import 'package:task_08/feature/search/presentation/page/overview_screen.dart.dart';
 import 'package:task_08/feature/search/presentation/page/search_screen.dart';
 
 class Home extends StatefulWidget {
@@ -14,9 +16,9 @@ class _HomeState extends State<Home> {
   final _pages = [
     DashboardScreen(),
     SearchScreen(),
-    TestScreen(title: "Chat Screen"),
+    FiltersScreen(),
     ApplicationScreen(),
-    TestScreen(title: "Profile Screen"),
+    OverViewScreen(),
   ];
   int _currentPage = 0;
 
