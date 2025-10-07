@@ -1,3 +1,4 @@
+import 'package:task_08/core/util/my_enum.dart';
 import 'package:task_08/core/util/my_icons.dart';
 import 'package:task_08/core/util/my_image.dart';
 import 'package:task_08/feature/dashboard/data/model/course_item.dart';
@@ -52,6 +53,8 @@ class MyConstant {
       subTitle: "University of the West of Scotland London (UWS)",
       address: "London",
       price: 9535,
+      status: CourseStatus.cancelled,
+      date: DateTime.now()
     ),
     CourseItem(
       img: MyImage.course2,
@@ -59,6 +62,8 @@ class MyConstant {
       subTitle: "University of the West of Scotland London (UWS)",
       address: "London",
       price: 9535,
+      status: CourseStatus.active,
+      date: DateTime.now()
     ),
     CourseItem(
       img: MyImage.course3,
@@ -66,6 +71,8 @@ class MyConstant {
       subTitle: "University of the West of Scotland London (UWS)",
       address: "London",
       price: 9535,
+      status: CourseStatus.pending,
+      date: DateTime.now()
     ),
     CourseItem(
       img: MyImage.course4,
@@ -73,6 +80,8 @@ class MyConstant {
       subTitle: "University of the West of Scotland London (UWS)",
       address: "London",
       price: 9535,
+      status: CourseStatus.cancelled,
+      date: DateTime.now()
     ),
   ];
 }

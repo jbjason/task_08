@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_08/feature/application/presentation/page/application_screen.dart';
 import 'package:task_08/feature/dashboard/presentation/page/dashboard_screen.dart';
 import 'package:task_08/feature/home/presentation/widget/home_navbar.dart';
 import 'package:task_08/feature/search/presentation/page/search_screen.dart';
@@ -14,23 +15,25 @@ class _HomeState extends State<Home> {
     DashboardScreen(),
     SearchScreen(),
     TestScreen(title: "Chat Screen"),
-    TestScreen(title: "Application Screen"),
+    ApplicationScreen(),
     TestScreen(title: "Profile Screen"),
   ];
-  int _currentPage = 0 ;
+  int _currentPage = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       body: IndexedStack(index: _currentPage, children: _pages),
-      bottomNavigationBar: HomeNavbar(onPageChange: _onPageChange,
-      currentPage: _currentPage,),
+      body: IndexedStack(index: _currentPage, children: _pages),
+      bottomNavigationBar: HomeNavbar(
+        onPageChange: _onPageChange,
+        currentPage: _currentPage,
+      ),
     );
   }
- void _onPageChange(int i) {
+
+  void _onPageChange(int i) {
     setState(() => _currentPage = i);
   }
-
 }
 
 class TestScreen extends StatelessWidget {

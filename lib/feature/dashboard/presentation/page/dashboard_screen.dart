@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:task_08/core/util/my_dimens.dart';
 import 'package:task_08/feature/dashboard/presentation/widget/dashboard_appbar.dart';
 import 'package:task_08/feature/dashboard/presentation/widget/dashboard_categories.dart';
 import 'package:task_08/feature/dashboard/presentation/widget/dashboard_course_item_list.dart';
 import 'package:task_08/feature/dashboard/presentation/widget/dashboard_explore_list.dart';
-import 'package:task_08/feature/dashboard/presentation/widget/dashboard_explore_title.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -18,20 +16,17 @@ class _DashboardScreenState extends State<DashboardScreen> {
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        spacing: 20,
+        spacing: 25,
         children: [
           // appbar
           DashboardAppbar(),
           // category
           DashboardCategories(),
           // explore files title
-          DashboardExploreTitle() ,
           DashboardExploreList(),
           // popular courses
-          MyDimens().getTitle("Popular Courses 🔥"), 
           DashboardCourseItemList(),
           // extra parts
-          DashboardExploreTitle() ,
           DashboardExploreList(),
         ],
       ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task_08/config/extenstion/media_query_extension.dart';
 import 'package:task_08/core/util/my_constant.dart';
+import 'package:task_08/core/util/my_dimens.dart';
 import 'package:task_08/feature/dashboard/data/model/course_item.dart';
 
 class DashboardCourseItemList extends StatelessWidget {
@@ -8,18 +9,25 @@ class DashboardCourseItemList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: List.generate(
-          MyConstant.courses.length,
-          (i) => Container(
-            margin: EdgeInsets.symmetric(horizontal: 15),
-            width: context.screenWidth * .8,
-            child: getCourseListItem(MyConstant.courses[i]),
+    return Column(
+      spacing: 10,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        MyDimens().getTitle("Popular Courses 🔥"),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: List.generate(
+              MyConstant.courses.length,
+              (i) => Container(
+                margin: EdgeInsets.symmetric(horizontal: 15),
+                width: context.screenWidth * .8,
+                child: getCourseListItem(MyConstant.courses[i]),
+              ),
+            ),
           ),
         ),
-      ),
+      ],
     );
   }
 

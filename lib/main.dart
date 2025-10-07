@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task_08/feature/home/presentation/page/home_screen.dart';
+import 'package:task_08/feature/home/presentation/page/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
+        scaffoldBackgroundColor: Colors.white
       ),
       home: const Home(),
     );
