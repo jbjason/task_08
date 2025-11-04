@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_08/feature/home/presentation/page/home.dart';
+import 'package:task_08/feature/search/presentation/page/test_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         scaffoldBackgroundColor: Colors.white
       ),
-      home: const Home(),
+      home: const LifecycleDemo(),
     );
   }
 }
